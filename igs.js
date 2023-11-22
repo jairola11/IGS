@@ -30,6 +30,9 @@ igs.get('/documents', (req,res) => {
     res.render('index.ejs');
 });
 
+igs.get("/",(req,res)=>{
+ res.send("api desplegada")
+} )
 
 
 igs.use(express.json()); 
@@ -50,7 +53,7 @@ igs.use('/up', unidadProductiva);
 
 igs.use('/aut', autRouter);
 
-igs.listen(3000,()=>{
+igs.listen(8100, "::",()=>{
     console.log(`Servidor IGS ejecutando en http://localhost:${port}`);
 })
 
