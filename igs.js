@@ -30,9 +30,8 @@ igs.get('/documents', (req,res) => {
     res.render('index.ejs');
 });
 
-igs.get("/",(req,res)=>{
- res.send("api desplegada")
-} )
+igs.use(express.static("frontend"));
+
 
 
 igs.use(express.json()); 
